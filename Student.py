@@ -1,5 +1,8 @@
 #Class is a blueprint of an object
 class Student:
+    #class level attribute. Shared by all instances of the class
+    school_name = "Weber State University" 
+    
     #constructor initializer
     #attributes
     def __init__(self, first_name, last_name, grade):
@@ -13,10 +16,16 @@ class Student:
                f"\tFirst Name: {self.first_name} \n",
                f"\tLast Name: {self.last_name} \n",
                f"\tGrade: {self.grade}\n",
-               f"\tEmail: {self.email}")
+               f"\tEmail: {self.email}\n",
+               f"\tSchool Name: {Student.school_name}")
     
     def change_grade(self, new_grade_level):
         self.grade = new_grade_level
+        
+    def __str__(self):
+        # Magic method __str__ is a user-friendly string representation of the object
+        return (f"Name: {self.first_name} {self.last_name} Email: {self.email}"
+               f"School Name: {Student.school_name}")
         
 #jay_pike is an instance of the student class
 jay_pike = Student("Jay", "Pike", "Sophomore") #Object of the student class
@@ -35,4 +44,8 @@ jay_pike.print_student_data()
 jane_doe.print_student_data()
 waldo_wildcat.print_student_data()
 
+print("Printing out object")
+print(jay_pike)
+print(jane_doe)
+print(waldo_wildcat)
 # We created the OOP branch
