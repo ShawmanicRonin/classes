@@ -39,7 +39,6 @@ class Student:
         return (f"Name: {self.first_name} {self.last_name} Email: {self.email}"
                f"School Name: {Student.school_name} ID: {self.student_id}")
     
-    
     @staticmethod #does not have access to class level attributes or instance attributes
     def format_student_id(student_id):
         #format the student id so that it starts with WSU 
