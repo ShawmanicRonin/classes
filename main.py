@@ -1,4 +1,4 @@
-from student import Student
+from Student import Student
 from graduate_student import Graduate_Student
        
 #jay_pike is an instance of the student class
